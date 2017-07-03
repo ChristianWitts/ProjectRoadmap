@@ -1,0 +1,14 @@
+%% High level overview
+sequenceDiagram
+    participant Issue
+    participant 2 Pager PR
+    participant Formalization
+    loop Discussion
+        Issue->>Issue: Iterate on initial proposal
+    end
+    Issue->>2 Pager PR: Close issue & create to Markdown document
+    loop Comments
+        2 Pager PR->>2 Pager PR: Ensure proposal meets guidelines
+    end
+    2 Pager PR->>Formalization: Project reaches formalisation
+    Note right of Formalization: Project is added<br/>to global roadmap<br/>& team roadmap.
